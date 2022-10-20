@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css?v=8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <script defer src="/js/app.js"></script>
+    <title>CountDown</title>
+  </head>
+  <body>
+    <main>
+      <section class="countdown-container">
+        <div class="title">Ready to Launch in...</div>
+        <div class="countdown">
+          <div class="days">
+            <span>Dias</span>
+            <p>08</p>
+          </div>
+          <div class="hours">
+            <span>Horas</span>
+            <p>: 12</p>
+          </div>
+          <div class="minutes">
+            <span>Minutos</span>
+            <p>: 44</p>
+          </div>
+          <div class="seconds">
+            <span>Segundos</span>
+            <p>: 28</p>
+          </div>
+        </div>
+        <div class="news-letter">
+          <div class="caption">
+            Inscreva-se para saber mais sobre o lançamento
+          </div>
+          <div id="button" href="#">Inscreva-se</div>
+        </div>
+      </section>
+      <section class="countdown-img">
+        <img class="item-img" src="/assets/rocket.svg" alt="" />
+      </section>
+    </main>
+
+    <div class="modal-container disable">
+      <div class="fade"></div>
+      <div class="dialog">
+        <div class="caption">Inscreva-se para ficar por dentro</div>
+        <form action="/">
+          <label for="name">Nome:</label>
+          <input id="name" type="text" />
+          <label for="email">E-mail:</label>
+          <input id="email" type="text" />
+
+          <div class="send-button">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

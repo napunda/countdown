@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 100vh;
+  width: 100vw;
+  background: url(/assets/top-image.svg) top left no-repeat,
+    url(/assets/bottom-image.svg) bottom left no-repeat;
+  background-size: 100%, 100%;
+}
+
+.countdown-container {
+  width: 60%;
+}
+
+.countdown-img {
+  width: 40%;
+}
+
+.countdown-img .item-img {
+  width: 100%;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-container .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+  color: #6c63ff;
+  margin-bottom: 19px;
+}
+
+.countdown {
+  margin-bottom: 46px;
+}
+.countdown span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #c8c8c8;
+}
+
+.countdown p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  color: #4d4c59;
+  line-height: 80px;
+}
+
+.news-letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-letter .caption {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9c9ab6;
+  margin-bottom: 30px;
+}
+
+.news-letter #button {
+  height: 46px;
+  width: 160px;
+  background-color: #6c63ff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  transition: all 0.15s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.news-letter #button:hover {
+  background-color: #6b63ffd0;
+}
+
+.countdown-container .countdown {
+  display: flex;
+  gap: 20px;
+}
+
+.countdown .divisor {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  color: #4d4c59;
+  display: flex;
+  align-items: center;
+  line-height: 80px;
+}
+
+.days,
+.hours,
+.minutes .seconds {
+  text-align: center;
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+
+.dialog {
+  z-index: 20;
+}
+
+.modal-container .fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000002c;
+}
+
+.modal-container .dialog {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 500px;
+  padding: 20px;
+}
+.modal-container .dialog form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-container .dialog form label {
+  margin-top: 30px;
+}
+
+.modal-container .dialog form input {
+  height: 46px;
+  font-size: 16px;
+}
+.modal-container .dialog form input:focus-visible {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.dialog .caption {
+  font-size: 20px;
+  color: #6c63ff;
+}
+
+.dialog .send-button {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.dialog .send-button input {
+  height: 46px;
+  font-family: "Poppins";
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 16px;
+  width: 160px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+  margin-top: 30px;
+}
+
+.dialog .send-button input:hover {
+  background-color: #6b63ffd0;
+}
+
+.disable {
+  top: -300px;
+  opacity: 0;
+  pointer-events: none;
+}
