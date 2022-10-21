@@ -43,6 +43,7 @@ main {
 }
 
 .countdown-container .title {
+  text-align: center;
   font-style: normal;
   font-weight: 700;
   font-size: 44px;
@@ -115,7 +116,7 @@ main {
 
 .countdown-container .countdown {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .countdown .divisor {
@@ -130,8 +131,25 @@ main {
 
 .days,
 .hours,
-.minutes .seconds {
+.minutes,
+.seconds {
   text-align: center;
+  width: 100px;
+}
+
+.days p,
+.hours p,
+.minutes p {
+  position: relative;
+}
+
+.days p::before,
+.hours p::before,
+.minutes p::before {
+  content: ":";
+  position: absolute;
+  right: -30px;
+  top: 0;
 }
 
 .modal-container {
@@ -219,4 +237,76 @@ main {
   top: -300px;
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  main {
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .countdown-container,
+  .countdown-img {
+    width: 100%;
+  }
+  .countdown-img img {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 960px) {
+  .countdown-container .title {
+    font-size: 35px;
+  }
+  .countdown p {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  main {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    width: 60px;
+  }
+
+  .countdown p {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .days p::before,
+  .hours p::before,
+  .minutes p::before {
+    right: -25px;
+  }
+
+  .countdown-container .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .countdown p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    width: 40px;
+  }
+  .countdown span {
+    font-size: 10px;
+  }
+  .countdown-container .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
