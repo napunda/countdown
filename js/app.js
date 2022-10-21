@@ -10,7 +10,7 @@ modaltrigger.addEventListener("click", modaltoggle);
 fadetrigger.addEventListener("click", modaltoggle);
 
 const countdown = () => {
-  const targetDate = new Date("2022/10/21 11:30:00:00").getTime();
+  const targetDate = new Date("2023/01/01 0:00:00:00").getTime();
   const now = new Date().getTime();
   const gap = targetDate - now;
 
